@@ -11,6 +11,7 @@
 		B12510DF293A2421634B7CFF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B125176AF6F77D73B88A4141 /* Info.plist */; };
 		B125143FB1B8AA7FD3FACB1B /* STVRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251D802C41626A16E139BA /* STVRepo.m */; };
 		B125176C8AF8D27B8530ACBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251EDA49261B17F15ED49B /* AppDelegate.m */; };
+		B12517D4734474ED90E8E7AD /* STVDataServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251EB209CFFC478CA595CC /* STVDataServiceImplementation.m */; };
 		B1251806954A96C3B5091DCD /* STVReposMapperImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251737B0C205C4DD9E214B /* STVReposMapperImplementation.m */; };
 		B125189BA92BA4FB10BE8FD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B12513F1AEA4B2C6401E11DF /* main.m */; };
 		B1251C993ABFECFD6A874F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B12515B8A140A480B2EF2247 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		B1251737B0C205C4DD9E214B /* STVReposMapperImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STVReposMapperImplementation.m; sourceTree = "<group>"; };
 		B125176AF6F77D73B88A4141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		B12518551AD2A836DCEBC3A0 /* STVReposFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVReposFeedTableViewController.h; sourceTree = "<group>"; };
+		B125188A60EF31BB843CA63C /* STVDataServiceImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVDataServiceImplementation.h; sourceTree = "<group>"; };
 		B1251958E663E5D01E400846 /* STVReposMapperImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVReposMapperImplementation.h; sourceTree = "<group>"; };
 		B1251A4FE909B53ADE42C3BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1251B45714751BEB21917BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +36,7 @@
 		B1251C3655430C1A2094CCA7 /* STVReposFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STVReposFeedTableViewController.m; sourceTree = "<group>"; };
 		B1251C3C736F50456BCA0323 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1251D802C41626A16E139BA /* STVRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STVRepo.m; sourceTree = "<group>"; };
+		B1251EB209CFFC478CA595CC /* STVDataServiceImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STVDataServiceImplementation.m; sourceTree = "<group>"; };
 		B1251EDA49261B17F15ED49B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B1251FA172D8B6161C845513 /* STVRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVRepo.h; sourceTree = "<group>"; };
 		FD02929C1D11F1210064F83F /* STVRepoDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVRepoDetailsViewController.h; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				B125125055FB5E16F498A8B3 /* STVDataService.h */,
+				B1251EB209CFFC478CA595CC /* STVDataServiceImplementation.m */,
+				B125188A60EF31BB843CA63C /* STVDataServiceImplementation.h */,
 			);
 			path = "Service Layer";
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				B125176C8AF8D27B8530ACBF /* AppDelegate.m in Sources */,
 				B125143FB1B8AA7FD3FACB1B /* STVRepo.m in Sources */,
 				B1251CF1F9CF0ED1BED068F2 /* STVReposFeedTableViewController.m in Sources */,
+				B12517D4734474ED90E8E7AD /* STVDataServiceImplementation.m in Sources */,
 				B1251806954A96C3B5091DCD /* STVReposMapperImplementation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
