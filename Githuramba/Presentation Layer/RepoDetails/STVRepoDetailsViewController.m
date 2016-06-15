@@ -7,6 +7,8 @@
 //
 
 #import "STVRepoDetailsViewController.h"
+#import "STVDataService.h"
+#import "STVDataServiceImplementation.h"
 
 @interface STVRepoDetailsViewController ()
 
@@ -14,9 +16,17 @@
 
 @implementation STVRepoDetailsViewController
 
+#pragma mark - Зависимости
+- (id <STVDataService>)dataService {
+    if (!_dataService) {
+        _dataService = [STVDataServiceImplementation new];
+    }
+    return _dataService;
+}
+
+#pragma mark - Жизненный цикл контроллера
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

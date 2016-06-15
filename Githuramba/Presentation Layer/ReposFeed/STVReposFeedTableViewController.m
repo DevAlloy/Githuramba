@@ -7,6 +7,8 @@
 //
 
 #import "STVReposFeedTableViewController.h"
+#import "STVDataService.h"
+#import "STVDataServiceImplementation.h"
 
 @interface STVReposFeedTableViewController ()
 
@@ -16,10 +18,22 @@
 
 @implementation STVReposFeedTableViewController
 
+#pragma mark - Зависимости
+- (id <STVDataService>)dataService {
+    if (!_dataService) {
+        _dataService = [STVDataServiceImplementation new];
+    }
+    return _dataService;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    [self.dataService obtainRamblerReposWithCompletionBlock:^(NSArray *repos, NSError *error) {
+        self.repos = repos;
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,17 +42,14 @@
 
 #pragma mark - Внутренние методы
 
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.repos.count;
 }
 
 @end

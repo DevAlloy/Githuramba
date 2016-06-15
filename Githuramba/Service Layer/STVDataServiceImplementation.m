@@ -4,15 +4,24 @@
 //
 
 #import "STVDataServiceImplementation.h"
+#import "STVReposMapper.h"
+#import "STVReposMapperImplementation.h"
 
 
 @implementation STVDataServiceImplementation
 
 - (NSURLSession *)urlSession {
     if (!_urlSession) {
-        self.urlSession = [NSURLSession sharedSession];
+        _urlSession = [NSURLSession sharedSession];
     }
     return _urlSession;
+}
+
+- (id <STVReposMapper>)reposMapper {
+    if(!_reposMapper) {
+        _reposMapper = [STVReposMapperImplementation new];
+    }
+    return _reposMapper;
 }
 
 - (void)obtainRamblerReposWithCompletionBlock:(STVDataServiceReposCompletionBlock)completionBlock {
@@ -23,6 +32,7 @@
                                                          completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                                              data = data ?: [NSData data];
                                                              NSArray *repos = [self reposDataFromReposData:data];
+                                                             completionBlock(repos, error);
                                                          }];
     [dataTask resume];
 }
@@ -32,8 +42,12 @@
 }
 
 - (NSArray *)reposDataFromReposData:(NSData *)reposData {
-    NSDictionary *reposDictionary = [NSJSONSerialization JSONObjectWithData:reposData options:0 error:nil];
-    return @[];
+    if (!reposData) {
+        return nil;
+    }
+    NSArray *reposRepresentationArray = [NSJSONSerialization JSONObjectWithData:reposData options:0 error:nil];
+    NSArray *repos = [self.reposMapper mapReposArrayFromReposRepresentation:reposRepresentationArray];
+    return repos;
 }
 
 @end

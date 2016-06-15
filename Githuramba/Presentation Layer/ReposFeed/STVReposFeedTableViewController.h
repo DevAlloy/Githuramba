@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol STVDataService;
+
 @interface STVReposFeedTableViewController : UITableViewController
+
+@property (nonatomic, strong) id<STVDataService> dataService;
 
 @end

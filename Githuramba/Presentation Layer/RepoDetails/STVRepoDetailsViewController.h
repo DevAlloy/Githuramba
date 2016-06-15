@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol STVDataService;
+
 @interface STVRepoDetailsViewController : UIViewController
+
+@property (nonatomic, strong) id<STVDataService> dataService;
 
 @end
