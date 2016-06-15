@@ -7,4 +7,7 @@
 #import "STVReposMapper.h"
 
 @interface STVReposMapperImplementation : NSObject <STVReposMapper>
+
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
+
 @end
