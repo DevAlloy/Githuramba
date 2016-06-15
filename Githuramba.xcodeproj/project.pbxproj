@@ -11,6 +11,7 @@
 		B12510DF293A2421634B7CFF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B125176AF6F77D73B88A4141 /* Info.plist */; };
 		B125143FB1B8AA7FD3FACB1B /* STVRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251D802C41626A16E139BA /* STVRepo.m */; };
 		B125176C8AF8D27B8530ACBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251EDA49261B17F15ED49B /* AppDelegate.m */; };
+		B1251806954A96C3B5091DCD /* STVReposMapperImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251737B0C205C4DD9E214B /* STVReposMapperImplementation.m */; };
 		B125189BA92BA4FB10BE8FD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B12513F1AEA4B2C6401E11DF /* main.m */; };
 		B1251C993ABFECFD6A874F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B12515B8A140A480B2EF2247 /* Assets.xcassets */; };
 		B1251CF1F9CF0ED1BED068F2 /* STVReposFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251C3655430C1A2094CCA7 /* STVReposFeedTableViewController.m */; };
@@ -22,8 +23,11 @@
 		B125125055FB5E16F498A8B3 /* STVDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVDataService.h; sourceTree = "<group>"; };
 		B12513F1AEA4B2C6401E11DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B12515B8A140A480B2EF2247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B12515C461847F1889C1DA38 /* STVReposMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVReposMapper.h; sourceTree = "<group>"; };
+		B1251737B0C205C4DD9E214B /* STVReposMapperImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STVReposMapperImplementation.m; sourceTree = "<group>"; };
 		B125176AF6F77D73B88A4141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		B12518551AD2A836DCEBC3A0 /* STVReposFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVReposFeedTableViewController.h; sourceTree = "<group>"; };
+		B1251958E663E5D01E400846 /* STVReposMapperImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVReposMapperImplementation.h; sourceTree = "<group>"; };
 		B1251A4FE909B53ADE42C3BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1251B45714751BEB21917BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1251BA6263A2B515379B924 /* Githuramba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Githuramba.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +51,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B12510114686C43215F5EE8F /* Core Layer */ = {
+			isa = PBXGroup;
+			children = (
+				B12515C461847F1889C1DA38 /* STVReposMapper.h */,
+				B1251737B0C205C4DD9E214B /* STVReposMapperImplementation.m */,
+				B1251958E663E5D01E400846 /* STVReposMapperImplementation.h */,
+			);
+			path = "Core Layer";
+			sourceTree = "<group>";
+		};
 		B1251228222EE15C40955DCD /* Githuramba */ = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +74,7 @@
 				B12517CF692745A9D0EA07A4 /* Presentation Layer */,
 				B12517771A25DF4F481AA342 /* Service Layer */,
 				B125129A990C59D802220509 /* Models */,
+				B12510114686C43215F5EE8F /* Core Layer */,
 			);
 			path = Githuramba;
 			sourceTree = "<group>";
@@ -201,6 +216,7 @@
 				B125176C8AF8D27B8530ACBF /* AppDelegate.m in Sources */,
 				B125143FB1B8AA7FD3FACB1B /* STVRepo.m in Sources */,
 				B1251CF1F9CF0ED1BED068F2 /* STVReposFeedTableViewController.m in Sources */,
+				B1251806954A96C3B5091DCD /* STVReposMapperImplementation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
