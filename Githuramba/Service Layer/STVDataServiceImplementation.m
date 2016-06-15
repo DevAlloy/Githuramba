@@ -32,7 +32,9 @@
                                                          completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                                              data = data ?: [NSData data];
                                                              NSArray *repos = [self reposDataFromReposData:data];
-                                                             completionBlock(repos, error);
+                                                             dispatch_async(dispatch_get_main_queue(), ^{
+                                                                 completionBlock(repos, error);
+                                                             });
                                                          }];
     [dataTask resume];
 }

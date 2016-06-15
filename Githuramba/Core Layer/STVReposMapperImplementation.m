@@ -37,6 +37,7 @@
     }
 
     repo.identifier = repoRepresentation[@"id"];
+    repo.name = repoRepresentation[@"name"];
     repo.repoDescription = repoRepresentation[@"description"];
     repo.createdAt = [self.dateFormatter dateFromString:repoRepresentation[@"created_at"]];
     repo.stars = repoRepresentation[@"stargazers_count"];

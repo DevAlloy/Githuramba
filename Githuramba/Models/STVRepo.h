@@ -9,6 +9,7 @@
 @interface STVRepo : NSObject
 
 @property (nonatomic, copy) NSString *identifier;
+@property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *repoDescription;
 @property (nonatomic, copy) NSDate *createdAt;
 @property (nonatomic, copy) NSNumber *stars;
