@@ -13,7 +13,9 @@
 		B125176C8AF8D27B8530ACBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251EDA49261B17F15ED49B /* AppDelegate.m */; };
 		B125189BA92BA4FB10BE8FD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B12513F1AEA4B2C6401E11DF /* main.m */; };
 		B1251C993ABFECFD6A874F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B12515B8A140A480B2EF2247 /* Assets.xcassets */; };
+		B1251CF1F9CF0ED1BED068F2 /* STVReposFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251C3655430C1A2094CCA7 /* STVReposFeedTableViewController.m */; };
 		B1251D14D58B4E4B73E845B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B12512D1B259AB3A0AC340BB /* Main.storyboard */; };
+		FD02929E1D11F1210064F83F /* STVRepoDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD02929D1D11F1210064F83F /* STVRepoDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +23,17 @@
 		B12513F1AEA4B2C6401E11DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B12515B8A140A480B2EF2247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B125176AF6F77D73B88A4141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		B12518551AD2A836DCEBC3A0 /* STVReposFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVReposFeedTableViewController.h; sourceTree = "<group>"; };
 		B1251A4FE909B53ADE42C3BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1251B45714751BEB21917BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1251BA6263A2B515379B924 /* Githuramba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Githuramba.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1251C3655430C1A2094CCA7 /* STVReposFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STVReposFeedTableViewController.m; sourceTree = "<group>"; };
 		B1251C3C736F50456BCA0323 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1251D802C41626A16E139BA /* STVRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STVRepo.m; sourceTree = "<group>"; };
 		B1251EDA49261B17F15ED49B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B1251FA172D8B6161C845513 /* STVRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVRepo.h; sourceTree = "<group>"; };
+		FD02929C1D11F1210064F83F /* STVRepoDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVRepoDetailsViewController.h; sourceTree = "<group>"; };
+		FD02929D1D11F1210064F83F /* STVRepoDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STVRepoDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B1251716778975A08B730F74 /* ReposFeed */ = {
+			isa = PBXGroup;
+			children = (
+				B12518551AD2A836DCEBC3A0 /* STVReposFeedTableViewController.h */,
+				B1251C3655430C1A2094CCA7 /* STVReposFeedTableViewController.m */,
+			);
+			path = ReposFeed;
+			sourceTree = "<group>";
+		};
 		B12517771A25DF4F481AA342 /* Service Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,8 +117,19 @@
 		B12517CF692745A9D0EA07A4 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
+				B1251716778975A08B730F74 /* ReposFeed */,
+				B1251A8C968478E772612C1A /* RepoDetails */,
 			);
 			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		B1251A8C968478E772612C1A /* RepoDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FD02929C1D11F1210064F83F /* STVRepoDetailsViewController.h */,
+				FD02929D1D11F1210064F83F /* STVRepoDetailsViewController.m */,
+			);
+			path = RepoDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,8 +197,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B125189BA92BA4FB10BE8FD5 /* main.m in Sources */,
+				FD02929E1D11F1210064F83F /* STVRepoDetailsViewController.m in Sources */,
 				B125176C8AF8D27B8530ACBF /* AppDelegate.m in Sources */,
 				B125143FB1B8AA7FD3FACB1B /* STVRepo.m in Sources */,
+				B1251CF1F9CF0ED1BED068F2 /* STVReposFeedTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +349,7 @@
 				B1251B8CF533DD2D4B3F369A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
