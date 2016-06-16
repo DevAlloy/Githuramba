@@ -47,7 +47,11 @@
 
 #pragma mark - Отображение
 - (void)setupRepo {
-    
+    self.titleLabel.text = self.repo.name;
+    self.starLabel.text = self.repo.stars.stringValue;
+    self.forkLabel.text = self.repo.forks.stringValue;
+    self.descriptionLabel.text = self.repo.repoDescription;
+    self.createdAtLabel.text = [self.repo.createdAt description];
 }
 
 @end
