@@ -30,6 +30,7 @@
     return _dataService;
 }
 
+#pragma mark - Жизненный цикл контроллера
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.delegate = self;
@@ -78,8 +79,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"openDetails" sender:self];
     self.selectedRepo = self.repos[indexPath.row];
+    [self performSegueWithIdentifier:@"openDetails" sender:self];
 }
 
 - (void)configureCell:(STVFeedCell *)tableViewCell withRepo:(STVRepo *)repo {
