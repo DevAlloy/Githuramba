@@ -11,10 +11,12 @@
 #import "STVDataServiceImplementation.h"
 #import "STVFeedCell.h"
 #import "STVRepo.h"
+#import "STVRepoDetailsViewController.h"
 
 @interface STVReposFeedTableViewController ()
 
 @property (nonatomic, strong) NSArray *repos;
+@property (nonatomic, strong) STVRepo *selectedRepo;
 
 @end
 
@@ -45,8 +47,13 @@
 }
 
 #pragma mark - Внутренние методы
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    STVRepoDetailsViewController *repoDetailsViewController = segue.destinationViewController;
+    repoDetailsViewController.repoName = self.selectedRepo.name;
+    self.selectedRepo = nil;
+}
 
-#pragma mark - Table view data source
+#pragma mark - Table view
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -65,6 +72,11 @@
     [self configureCell:tableViewCell withRepo:self.repos[indexPath.row]];
 
     return tableViewCell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"openDetails" sender:self];
+    self.selectedRepo = self.repos[indexPath.row];
 }
 
 - (void)configureCell:(STVFeedCell *)tableViewCell withRepo:(STVRepo *)repo {

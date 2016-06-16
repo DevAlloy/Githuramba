@@ -13,5 +13,6 @@
 @interface STVRepoDetailsViewController : UIViewController
 
 @property (nonatomic, strong) id<STVDataService> dataService;
+@property (nonatomic, copy) NSString *repoName;
 
 @end
