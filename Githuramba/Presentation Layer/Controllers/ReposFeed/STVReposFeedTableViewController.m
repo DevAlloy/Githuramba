@@ -36,9 +36,12 @@
     self.tableView.dataSource = self;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 160.f;
+
+    __weak typeof(self) weakSelf = self;
     [self.dataService obtainRamblerReposWithCompletionBlock:^(NSArray *repos, NSError *error) {
-        self.repos = repos;
-        [self.tableView reloadData];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        strongSelf.repos = repos;
+        [strongSelf.tableView reloadData];
     }];
 }
 

@@ -30,10 +30,13 @@
 #pragma mark - Жизненный цикл контроллера
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    __weak typeof(self) weakSelf = self;
     [self.dataService obtainRamblerRepoDetailForRepoName:self.repoName
                                      withCompletionBlock:^(STVRepo *repo, NSError *error) {
-                                         self.repo = repo;
-                                         [self setupRepo];
+                                         __strong typeof(weakSelf) strongSelf = weakSelf;
+                                         strongSelf.repo = repo;
+                                         [strongSelf setupRepo];
                                      }];
 }
 
