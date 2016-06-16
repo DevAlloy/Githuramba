@@ -9,8 +9,11 @@
 #import "STVRepoDetailsViewController.h"
 #import "STVDataService.h"
 #import "STVDataServiceImplementation.h"
+#import "STVRepo.h"
 
 @interface STVRepoDetailsViewController ()
+
+@property (nonatomic, strong) STVRepo *repo;
 
 @end
 
@@ -27,11 +30,21 @@
 #pragma mark - Жизненный цикл контроллера
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.dataService obtainRamblerRepoDetailForRepoName:self.repoName
+                                     withCompletionBlock:^(STVRepo *repo, NSError *error) {
+                                         self.repo = repo;
+                                         [self setupRepo];
+                                     }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Отображение
+- (void)setupRepo {
+    
 }
 
 @end

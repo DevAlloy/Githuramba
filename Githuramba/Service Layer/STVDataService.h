@@ -5,13 +5,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class STVRepo;
+
 typedef void (^STVDataServiceReposCompletionBlock)(NSArray *repos, NSError *error);
-typedef void (^STVDataServiceRepoDetailCompletionBlock)(NSArray *repos, NSError *error);
+typedef void (^STVDataServiceRepoDetailCompletionBlock)(STVRepo *repo, NSError *error);
 
 @protocol STVDataService <NSObject>
 
 - (void)obtainRamblerReposWithCompletionBlock:(STVDataServiceReposCompletionBlock)completionBlock;
 
-- (void)obtainRamblerRepoDetailForRepoName:(NSString *)repoName withCompletionBlock:(STVDataServiceReposCompletionBlock)completionBlock;
+- (void)obtainRamblerRepoDetailForRepoName:(NSString *)repoName withCompletionBlock:(STVDataServiceRepoDetailCompletionBlock)completionBlock;
 
 @end
