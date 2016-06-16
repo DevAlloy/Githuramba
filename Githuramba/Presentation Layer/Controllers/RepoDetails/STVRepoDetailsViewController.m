@@ -27,6 +27,15 @@
     return _dataService;
 }
 
+- (NSDateFormatter *)dateFormatter {
+    if (!_dateFormatter) {
+        _dateFormatter = [NSDateFormatter new];
+        _dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+        _dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
+    }
+    return _dateFormatter;
+}
+
 #pragma mark - Жизненный цикл контроллера
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,7 +60,7 @@
     self.starLabel.text = self.repo.stars.stringValue;
     self.forkLabel.text = self.repo.forks.stringValue;
     self.descriptionLabel.text = self.repo.repoDescription;
-    self.createdAtLabel.text = [self.repo.createdAt description];
+    self.createdAtLabel.text = [self.dateFormatter stringFromDate:self.repo.createdAt];
 }
 
 @end

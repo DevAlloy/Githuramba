@@ -15,6 +15,8 @@
 @property (nonatomic, strong) id<STVDataService> dataService;
 @property (nonatomic, copy) NSString *repoName;
 
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
+
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *starLabel;
 @property (weak, nonatomic) IBOutlet UILabel *forkLabel;
