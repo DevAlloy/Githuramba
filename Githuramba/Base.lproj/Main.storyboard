@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UQS-3x-O3b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uzF-nW-thN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Repo Details View Controller-->
+        <!--Details-->
         <scene sceneID="Gkc-nE-J2u">
             <objects>
                 <viewController id="p8G-d2-Knk" customClass="STVRepoDetailsViewController" sceneMemberID="viewController">
@@ -19,12 +19,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Details" id="Zbb-N6-H7O"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MU5-Cm-nYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1036" y="382"/>
         </scene>
-        <!--Repos Feed Table View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="XeS-Ke-YdY">
+            <objects>
+                <navigationController id="uzF-nW-thN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6cC-OP-wAA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UQS-3x-O3b" kind="relationship" relationship="rootViewController" id="q9N-PA-86y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eps-0b-oNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-487" y="382"/>
+        </scene>
+        <!--Repos-->
         <scene sceneID="yHh-6o-eLy">
             <objects>
                 <tableViewController id="UQS-3x-O3b" customClass="STVReposFeedTableViewController" sceneMemberID="viewController">
@@ -34,7 +51,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" id="dTs-Ez-Roh" customClass="STVFeedCell">
-                                <rect key="frame" x="0.0" y="28" width="600" height="131"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="131"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dTs-Ez-Roh" id="LkY-nF-u1K">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="130.5"/>
@@ -97,7 +114,6 @@
                                         <constraint firstItem="vm9-ml-54v" firstAttribute="leading" secondItem="LkY-nF-u1K" secondAttribute="leadingMargin" constant="9" id="yMY-Tt-ZJZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.87450980389999999" green="0.42352941179999998" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="vm9-ml-54v" id="tbE-BX-N1W"/>
                                     <outlet property="forkLabel" destination="s7U-pm-Xqe" id="iLq-9t-tIi"/>
@@ -112,6 +128,7 @@
                             <outlet property="delegate" destination="UQS-3x-O3b" id="X9T-9Q-D2N"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Repos" id="e4g-0N-j1b"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tto-TA-Hhs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
