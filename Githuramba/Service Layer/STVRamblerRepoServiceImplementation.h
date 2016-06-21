@@ -4,11 +4,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "STVDataService.h"
+#import "STVRepoService.h"
 
 @protocol STVReposMapper;
 
-@interface STVDataServiceImplementation : NSObject <STVDataService>
+@interface STVRamblerRepoServiceImplementation : NSObject <STVRepoService>
 
 @property (nonatomic, strong) NSURLSession *urlSession;
 @property (nonatomic, strong) id<STVReposMapper> reposMapper;

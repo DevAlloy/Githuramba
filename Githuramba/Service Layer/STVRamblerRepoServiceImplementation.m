@@ -3,11 +3,11 @@
 // Copyright (c) 2016 DevAlloy. All rights reserved.
 //
 
-#import "STVDataServiceImplementation.h"
+#import "STVRamblerRepoServiceImplementation.h"
 #import "STVReposMapper.h"
 #import "STVReposMapperImplementation.h"
 
-@implementation STVDataServiceImplementation
+@implementation STVRamblerRepoServiceImplementation
 
 - (NSURLSession *)urlSession {
     if (!_urlSession) {
@@ -23,7 +23,7 @@
     return _reposMapper;
 }
 
-- (void)obtainRamblerReposWithCompletionBlock:(STVDataServiceReposCompletionBlock)completionBlock {
+- (void)obtainReposWithCompletionBlock:(STVDataServiceReposCompletionBlock)completionBlock {
     NSURL *url = [NSURL URLWithString:@"https://api.github.com/orgs/rambler-ios/repos"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     __weak typeof(self) weakSelf = self;
@@ -38,7 +38,7 @@
     [dataTask resume];
 }
 
-- (void)obtainRamblerRepoDetailForRepoName:(NSString *)repoName withCompletionBlock:(STVDataServiceRepoDetailCompletionBlock)completionBlock {
+- (void)obtainRepoDetailForRepoName:(NSString *)repoName withCompletionBlock:(STVDataServiceRepoDetailCompletionBlock)completionBlock {
     NSString *urlString = [NSString stringWithFormat:@"https://api.github.com/repos/rambler-ios/%@", repoName];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];

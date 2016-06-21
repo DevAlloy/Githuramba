@@ -6,7 +6,6 @@
 #import "STVRepo.h"
 
 
-@implementation STVRepo {
+@implementation STVRepo
 
-}
 @end

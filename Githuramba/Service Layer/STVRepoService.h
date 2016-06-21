@@ -10,10 +10,10 @@
 typedef void (^STVDataServiceReposCompletionBlock)(NSArray *repos, NSError *error);
 typedef void (^STVDataServiceRepoDetailCompletionBlock)(STVRepo *repo, NSError *error);
 
-@protocol STVDataService <NSObject>
+@protocol STVRepoService <NSObject>
 
-- (void)obtainRamblerReposWithCompletionBlock:(STVDataServiceReposCompletionBlock)completionBlock;
+- (void)obtainReposWithCompletionBlock:(STVDataServiceReposCompletionBlock)completionBlock;
 
-- (void)obtainRamblerRepoDetailForRepoName:(NSString *)repoName withCompletionBlock:(STVDataServiceRepoDetailCompletionBlock)completionBlock;
+- (void)obtainRepoDetailForRepoName:(NSString *)repoName withCompletionBlock:(STVDataServiceRepoDetailCompletionBlock)completionBlock;
 
 @end

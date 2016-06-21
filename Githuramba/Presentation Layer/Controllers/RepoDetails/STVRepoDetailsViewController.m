@@ -7,8 +7,8 @@
 //
 
 #import "STVRepoDetailsViewController.h"
-#import "STVDataService.h"
-#import "STVDataServiceImplementation.h"
+#import "STVRepoService.h"
+#import "STVRamblerRepoServiceImplementation.h"
 #import "STVRepo.h"
 
 @interface STVRepoDetailsViewController ()
@@ -20,9 +20,9 @@
 @implementation STVRepoDetailsViewController
 
 #pragma mark - Зависимости
-- (id <STVDataService>)dataService {
+- (id <STVRepoService>)dataService {
     if (!_dataService) {
-        _dataService = [STVDataServiceImplementation new];
+        _dataService = [STVRamblerRepoServiceImplementation new];
     }
     return _dataService;
 }
@@ -41,12 +41,12 @@
     [super viewDidLoad];
 
     __weak typeof(self) weakSelf = self;
-    [self.dataService obtainRamblerRepoDetailForRepoName:self.repoName
-                                     withCompletionBlock:^(STVRepo *repo, NSError *error) {
-                                         __strong typeof(weakSelf) strongSelf = weakSelf;
-                                         strongSelf.repo = repo;
-                                         [strongSelf setupRepo];
-                                     }];
+    [self.dataService obtainRepoDetailForRepoName:self.repoName
+                              withCompletionBlock:^(STVRepo *repo, NSError *error) {
+                                  __strong typeof(weakSelf) strongSelf = weakSelf;
+                                  strongSelf.repo = repo;
+                                  [strongSelf setupRepo];
+                              }];
 }
 
 - (void)didReceiveMemoryWarning {

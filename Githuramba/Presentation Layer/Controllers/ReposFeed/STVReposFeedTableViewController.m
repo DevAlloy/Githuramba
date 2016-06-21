@@ -7,8 +7,8 @@
 //
 
 #import "STVReposFeedTableViewController.h"
-#import "STVDataService.h"
-#import "STVDataServiceImplementation.h"
+#import "STVRepoService.h"
+#import "STVRamblerRepoServiceImplementation.h"
 #import "STVFeedCell.h"
 #import "STVRepo.h"
 #import "STVRepoDetailsViewController.h"
@@ -23,9 +23,9 @@
 @implementation STVReposFeedTableViewController
 
 #pragma mark - Зависимости
-- (id <STVDataService>)dataService {
+- (id <STVRepoService>)dataService {
     if (!_dataService) {
-        _dataService = [STVDataServiceImplementation new];
+        _dataService = [STVRamblerRepoServiceImplementation new];
     }
     return _dataService;
 }
@@ -39,7 +39,7 @@
     self.tableView.estimatedRowHeight = 160.f;
 
     __weak typeof(self) weakSelf = self;
-    [self.dataService obtainRamblerReposWithCompletionBlock:^(NSArray *repos, NSError *error) {
+    [self.dataService obtainReposWithCompletionBlock:^(NSArray *repos, NSError *error) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         strongSelf.repos = repos;
         [strongSelf.tableView reloadData];
