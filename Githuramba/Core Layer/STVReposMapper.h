@@ -5,10 +5,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class STVRepo;
 @protocol STVReposMapper <NSObject>
 
 - (NSArray *)mapReposArrayFromReposRepresentation:(NSArray *)reposRepresentation;
 
-- (NSArray *)mapRepoDetailsFromRepoRepresentation:(NSDictionary *)repoRepresentation;
+- (STVRepo *)mapRepoDetailsFromRepoRepresentation:(NSDictionary *)repoRepresentation;
 
 @end

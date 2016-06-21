@@ -68,7 +68,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *tableViewCell = [self.tableView dequeueReusableCellWithIdentifier:@"feedCell"];
+    STVFeedCell *tableViewCell = [self.tableView dequeueReusableCellWithIdentifier:@"feedCell"];
     if (!tableViewCell) {
         tableViewCell = [STVFeedCell new];
         tableViewCell.selectionStyle = UITableViewCellSelectionStyleNone;

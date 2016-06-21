@@ -30,7 +30,7 @@
     NSURLSessionDataTask *dataTask =  [self.urlSession dataTaskWithRequest:request
                                                          completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                                              __strong typeof(weakSelf) strongSelf = weakSelf;
-                                                             NSArray *repos = [self reposArrayFromReposData:data];
+                                                             NSArray *repos = [strongSelf reposArrayFromReposData:data];
                                                              dispatch_async(dispatch_get_main_queue(), ^{
                                                                  completionBlock(repos, error);
                                                              });
@@ -38,7 +38,7 @@
     [dataTask resume];
 }
 
-- (void)obtainRamblerRepoDetailForRepoName:(NSString *)repoName withCompletionBlock:(STVDataServiceReposCompletionBlock)completionBlock {
+- (void)obtainRamblerRepoDetailForRepoName:(NSString *)repoName withCompletionBlock:(STVDataServiceRepoDetailCompletionBlock)completionBlock {
     NSString *urlString = [NSString stringWithFormat:@"https://api.github.com/repos/rambler-ios/%@", repoName];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -46,7 +46,7 @@
     NSURLSessionDataTask *dataTask =  [self.urlSession dataTaskWithRequest:request
                                                          completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                                              __strong typeof(weakSelf) strongSelf = weakSelf;
-                                                             STVRepo *repo = [self repoFromRepoData:data];
+                                                             STVRepo *repo = [strongSelf repoFromRepoData:data];
                                                              dispatch_async(dispatch_get_main_queue(), ^{
                                                                  completionBlock(repo, error);
                                                              });

@@ -30,7 +30,7 @@
     return repos;
 }
 
-- (NSArray *)mapRepoDetailsFromRepoRepresentation:(NSDictionary *)repoRepresentation {
+- (STVRepo *)mapRepoDetailsFromRepoRepresentation:(NSDictionary *)repoRepresentation {
     STVRepo *repo = [STVRepo new];
     if (!repoRepresentation[@"id"]) {
         return nil;

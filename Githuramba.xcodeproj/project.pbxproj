@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B1251086F5CCF981BD5803FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1251E5943E501F25F3B3431 /* LaunchScreen.storyboard */; };
-		B12510DF293A2421634B7CFF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B125176AF6F77D73B88A4141 /* Info.plist */; };
 		B125143FB1B8AA7FD3FACB1B /* STVRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251D802C41626A16E139BA /* STVRepo.m */; };
 		B125176C8AF8D27B8530ACBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251EDA49261B17F15ED49B /* AppDelegate.m */; };
 		B12517D4734474ED90E8E7AD /* STVDataServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251EB209CFFC478CA595CC /* STVDataServiceImplementation.m */; };
@@ -30,7 +29,6 @@
 		B12515C461847F1889C1DA38 /* STVReposMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVReposMapper.h; sourceTree = "<group>"; };
 		B1251737B0C205C4DD9E214B /* STVReposMapperImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STVReposMapperImplementation.m; sourceTree = "<group>"; };
 		B1251747D37E685BDA593393 /* STVReposFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVReposFeedTableViewController.h; sourceTree = "<group>"; };
-		B125176AF6F77D73B88A4141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		B125188A60EF31BB843CA63C /* STVDataServiceImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVDataServiceImplementation.h; sourceTree = "<group>"; };
 		B1251958E663E5D01E400846 /* STVReposMapperImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVReposMapperImplementation.h; sourceTree = "<group>"; };
 		B1251A4FE909B53ADE42C3BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,6 +42,7 @@
 		B1251EB209CFFC478CA595CC /* STVDataServiceImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STVDataServiceImplementation.m; sourceTree = "<group>"; };
 		B1251EDA49261B17F15ED49B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B1251FA172D8B6161C845513 /* STVRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVRepo.h; sourceTree = "<group>"; };
+		FD9C7A5E1D19F00B007316D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +69,7 @@
 		B1251228222EE15C40955DCD /* Githuramba */ = {
 			isa = PBXGroup;
 			children = (
-				B125176AF6F77D73B88A4141 /* Info.plist */,
+				FD9C7A5E1D19F00B007316D8 /* Info.plist */,
 				B12515B8A140A480B2EF2247 /* Assets.xcassets */,
 				B1251E5943E501F25F3B3431 /* LaunchScreen.storyboard */,
 				B12513860171001895FC78AA /* Supporting Files */,
@@ -207,6 +206,7 @@
 		B125196BF0BDAA2F06FFD651 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = DevAlloy;
 			};
 			buildConfigurationList = B1251779D6C9E09E9B3DA001 /* Build configuration list for PBXProject "Githuramba" */;
@@ -231,7 +231,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B12510DF293A2421634B7CFF /* Info.plist in Resources */,
 				B1251C993ABFECFD6A874F29 /* Assets.xcassets in Resources */,
 				B1251086F5CCF981BD5803FB /* LaunchScreen.storyboard in Resources */,
 				B1251D14D58B4E4B73E845B0 /* Main.storyboard in Resources */,
