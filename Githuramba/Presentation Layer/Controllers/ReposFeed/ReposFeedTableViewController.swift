@@ -10,14 +10,14 @@ import UIKit
 
 class ReposFeedTableViewController: UITableViewController {
     
-    lazy var dataService: STVRepoService = self.initialDataService()
+    lazy var dataService: RepoService = self.initialDataService()
     
     var repos: [STVRepo]?
     var selectedRepo: STVRepo?
     
     // MARK: - Зависимости
     
-    func initialDataService() -> STVRepoService {
+    func initialDataService() -> RepoService {
         let dataService = STVRamblerRepoServiceImplementation()
         return dataService
     }
@@ -31,7 +31,7 @@ class ReposFeedTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 160.0
         
         self.dataService.obtainReposWithCompletionBlock {[weak self] (repos: [STVRepo]?, error: NSError?) in
-            if let repos = repos {
+            if let repos = repos as [STVRepo]! {
                 self?.repos = repos;
                 self?.tableView.reloadData()
             }

@@ -6,7 +6,7 @@
 import UIKit
 
 class RepoDetailsViewController: UIViewController {
-    lazy var dataService: STVRepoService = self.initialDataService()
+    lazy var dataService: RepoService = self.initialDataService()
     
     lazy var dateFormatter: NSDateFormatter = self.initialDateFormatter()
     
@@ -21,7 +21,7 @@ class RepoDetailsViewController: UIViewController {
 
     // MARK: - Зависимости
 
-    func initialDataService() -> STVRepoService {
+    func initialDataService() -> RepoService {
         let dataService = STVRamblerRepoServiceImplementation()
         return dataService
     }
@@ -36,10 +36,12 @@ class RepoDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataService.obtainRepoDetailForRepoName(repoName) {[weak self] (repo: STVRepo?, error: NSError?) -> Void in
-            if let repo = repo {
-                self!.repo = repo
-                self!.setupRepo()
+        if let repoName = repoName as String! {
+            self.dataService.obtainRepoDetailForRepoName(repoName) {[weak self] (repo: STVRepo?, error: NSError?) -> Void in
+                if let repo = repo {
+                    self?.repo = repo
+                    self?.setupRepo()
+                }
             }
         }
     }

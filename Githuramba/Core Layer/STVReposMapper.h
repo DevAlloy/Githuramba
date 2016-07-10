@@ -8,7 +8,7 @@
 @class STVRepo;
 @protocol STVReposMapper <NSObject>
 
-- (NSArray *)mapReposArrayFromReposRepresentation:(NSArray *)reposRepresentation;
+- (NSArray<STVRepo *> *)mapReposArrayFromReposRepresentation:(NSArray *)reposRepresentation;
 
 - (STVRepo *)mapRepoDetailsFromRepoRepresentation:(NSDictionary *)repoRepresentation;
 
