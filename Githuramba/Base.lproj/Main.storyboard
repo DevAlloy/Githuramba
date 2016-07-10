@@ -114,7 +114,7 @@
         <!--Repos-->
         <scene sceneID="yHh-6o-eLy">
             <objects>
-                <tableViewController id="UQS-3x-O3b" customClass="STVReposFeedTableViewController" sceneMemberID="viewController">
+                <tableViewController id="UQS-3x-O3b" customClass="ReposFeedTableViewController" customModule="Githuramba" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="131" sectionHeaderHeight="28" sectionFooterHeight="28" id="FLJ-a7-PUx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

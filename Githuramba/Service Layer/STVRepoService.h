@@ -7,7 +7,7 @@
 
 @class STVRepo;
 
-typedef void (^STVDataServiceReposCompletionBlock)( NSArray * _Nullable repos, NSError *error);
+typedef void (^STVDataServiceReposCompletionBlock)( NSArray<STVRepo *> * _Nullable repos, NSError *error);
 typedef void (^STVDataServiceRepoDetailCompletionBlock)( STVRepo * _Nullable repo, NSError * _Nullable error);
 
 @protocol STVRepoService <NSObject>

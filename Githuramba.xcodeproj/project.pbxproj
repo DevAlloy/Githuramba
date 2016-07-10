@@ -16,8 +16,8 @@
 		B1251B0129A8821240404F37 /* STVFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B125138534AE81BCF911FCFA /* STVFeedCell.m */; };
 		B1251C993ABFECFD6A874F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B12515B8A140A480B2EF2247 /* Assets.xcassets */; };
 		B1251D14D58B4E4B73E845B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B12512D1B259AB3A0AC340BB /* Main.storyboard */; };
-		B1251D254245F2D6DC57283E /* STVReposFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1251AEB62C1FB79A0F110E1 /* STVReposFeedTableViewController.m */; };
 		FDCA1D321D327ECB00CAAA8F /* RepoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1251C2F473338F69EA2E43A /* RepoDetailsViewController.swift */; };
+		FDFD90871D328DBD00C3DC7C /* ReposFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFD90861D328DBD00C3DC7C /* ReposFeedTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +27,9 @@
 		B12515B8A140A480B2EF2247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B12515C461847F1889C1DA38 /* STVReposMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVReposMapper.h; sourceTree = "<group>"; };
 		B1251737B0C205C4DD9E214B /* STVReposMapperImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STVReposMapperImplementation.m; sourceTree = "<group>"; };
-		B1251747D37E685BDA593393 /* STVReposFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVReposFeedTableViewController.h; sourceTree = "<group>"; };
 		B125188A60EF31BB843CA63C /* STVRamblerRepoServiceImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVRamblerRepoServiceImplementation.h; sourceTree = "<group>"; };
 		B1251958E663E5D01E400846 /* STVReposMapperImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVReposMapperImplementation.h; sourceTree = "<group>"; };
 		B1251A4FE909B53ADE42C3BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B1251AEB62C1FB79A0F110E1 /* STVReposFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STVReposFeedTableViewController.m; sourceTree = "<group>"; };
 		B1251B45714751BEB21917BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1251BA6263A2B515379B924 /* Githuramba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Githuramba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1251C2F473338F69EA2E43A /* RepoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +41,7 @@
 		B1251FA172D8B6161C845513 /* STVRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVRepo.h; sourceTree = "<group>"; };
 		FD9C7A5E1D19F00B007316D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDCA1D331D327EE500CAAA8F /* Githuramba-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Githuramba-Bridging-Header.h"; sourceTree = "<group>"; };
+		FDFD90861D328DBD00C3DC7C /* ReposFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposFeedTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,8 +173,7 @@
 		B1251E797B0DE7A05FB54777 /* ReposFeed */ = {
 			isa = PBXGroup;
 			children = (
-				B1251747D37E685BDA593393 /* STVReposFeedTableViewController.h */,
-				B1251AEB62C1FB79A0F110E1 /* STVReposFeedTableViewController.m */,
+				FDFD90861D328DBD00C3DC7C /* ReposFeedTableViewController.swift */,
 			);
 			path = ReposFeed;
 			sourceTree = "<group>";
@@ -249,9 +247,9 @@
 				B125143FB1B8AA7FD3FACB1B /* STVRepo.m in Sources */,
 				B12517D4734474ED90E8E7AD /* STVRamblerRepoServiceImplementation.m in Sources */,
 				B1251806954A96C3B5091DCD /* STVReposMapperImplementation.m in Sources */,
-				B1251D254245F2D6DC57283E /* STVReposFeedTableViewController.m in Sources */,
 				FDCA1D321D327ECB00CAAA8F /* RepoDetailsViewController.swift in Sources */,
 				B1251B0129A8821240404F37 /* STVFeedCell.m in Sources */,
+				FDFD90871D328DBD00C3DC7C /* ReposFeedTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

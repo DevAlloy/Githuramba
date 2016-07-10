@@ -12,5 +12,6 @@
 #import "STVRepoService.h"
 #import "STVRamblerRepoServiceImplementation.h"
 #import "STVRepo.h"
+#import "STVFeedCell.h"
 
 #endif /* Githuramba_Bridging_Header_h */

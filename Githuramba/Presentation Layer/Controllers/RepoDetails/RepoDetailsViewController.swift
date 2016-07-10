@@ -8,8 +8,9 @@ import UIKit
 class RepoDetailsViewController: UIViewController {
     lazy var dataService: STVRepoService = self.initialDataService()
     
-    var repoName: String?
     lazy var dateFormatter: NSDateFormatter = self.initialDateFormatter()
+    
+    var repoName: String?
     var repo: STVRepo?
     
     @IBOutlet weak var titleLabel: UILabel!
