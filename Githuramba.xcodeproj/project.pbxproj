@@ -43,6 +43,7 @@
 		B1251EDA49261B17F15ED49B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B1251FA172D8B6161C845513 /* STVRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVRepo.h; sourceTree = "<group>"; };
 		FD9C7A5E1D19F00B007316D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDCA1D331D327EE500CAAA8F /* Githuramba-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Githuramba-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +70,7 @@
 		B1251228222EE15C40955DCD /* Githuramba */ = {
 			isa = PBXGroup;
 			children = (
+				FDCA1D331D327EE500CAAA8F /* Githuramba-Bridging-Header.h */,
 				FD9C7A5E1D19F00B007316D8 /* Info.plist */,
 				B12515B8A140A480B2EF2247 /* Assets.xcassets */,
 				B1251E5943E501F25F3B3431 /* LaunchScreen.storyboard */,
@@ -329,6 +331,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/s.tsyganov/Projects/Githuramba/Githuramba/Githuramba-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -366,6 +369,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/s.tsyganov/Projects/Githuramba/Githuramba/Githuramba-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
