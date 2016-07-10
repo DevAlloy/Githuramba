@@ -11,7 +11,6 @@
 #import "STVRamblerRepoServiceImplementation.h"
 #import "STVFeedCell.h"
 #import "STVRepo.h"
-#import "STVRepoDetailsViewController.h"
 
 @interface STVReposFeedTableViewController ()
 
@@ -52,8 +51,8 @@
 
 #pragma mark - Внутренние методы
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    STVRepoDetailsViewController *repoDetailsViewController = segue.destinationViewController;
-    repoDetailsViewController.repoName = self.selectedRepo.name;
+//    STVRepoDetailsViewController *repoDetailsViewController = segue.destinationViewController;
+//    repoDetailsViewController.repoName = self.selectedRepo.name;
     self.selectedRepo = nil;
 }
 

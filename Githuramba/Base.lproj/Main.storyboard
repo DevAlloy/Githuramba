@@ -9,7 +9,7 @@
         <!--Details-->
         <scene sceneID="Gkc-nE-J2u">
             <objects>
-                <viewController id="p8G-d2-Knk" customClass="STVRepoDetailsViewController" sceneMemberID="viewController">
+                <viewController id="p8G-d2-Knk" customClass="RepoDetailsViewController" customModule="Githuramba" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mn2-zu-Xcx"/>
                         <viewControllerLayoutGuide type="bottom" id="pp4-L0-Pa5"/>
@@ -32,7 +32,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="star" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ce3-Ld-LI6">
-                                <rect key="frame" x="66" y="139" width="29.5" height="21"/>
+                                <rect key="frame" x="66" y="139" width="30" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -124,7 +124,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="131"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dTs-Ez-Roh" id="LkY-nF-u1K">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="130.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="131"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-xxl" translatesAutoresizingMaskIntoConstraints="NO" id="7Eh-SI-hpF">
@@ -142,7 +142,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="star" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05G-uI-VU7">
-                                            <rect key="frame" x="63" y="65" width="29.5" height="21"/>
+                                            <rect key="frame" x="63" y="65" width="30" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -154,7 +154,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vm9-ml-54v">
-                                            <rect key="frame" x="17" y="102" width="575" height="20.5"/>
+                                            <rect key="frame" x="17" y="102" width="575" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
