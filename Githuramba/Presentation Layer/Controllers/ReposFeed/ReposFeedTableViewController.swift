@@ -67,10 +67,10 @@ class ReposFeedTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var tableViewCell = tableView.dequeueReusableCellWithIdentifier("feedCell")
         
-        if let tableViewCell = tableViewCell as? STVFeedCell {
+        if let tableViewCell = tableViewCell as? FeedCell {
             self.configureCell(tableViewCell, withRepo: self.repos![indexPath.row])
         } else {
-            tableViewCell = STVFeedCell()
+            tableViewCell = FeedCell()
             tableViewCell!.selectionStyle = .None
         }
         
@@ -82,7 +82,7 @@ class ReposFeedTableViewController: UITableViewController {
         self.performSegueWithIdentifier("openDetails", sender: self)
     }
     
-    func configureCell(tableViewCell: STVFeedCell, withRepo repo: STVRepo) {
+    func configureCell(tableViewCell: FeedCell, withRepo repo: STVRepo) {
         tableViewCell.repoNameLabel.text = repo.name
         tableViewCell.starLabel.text = repo.stars.stringValue
         tableViewCell.forkLabel.text = repo.forks.stringValue
