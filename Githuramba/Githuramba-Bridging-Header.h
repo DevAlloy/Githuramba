@@ -9,8 +9,4 @@
 #ifndef Githuramba_Bridging_Header_h
 #define Githuramba_Bridging_Header_h
 
-#import "STVRepo.h"
-#import "STVReposMapper.h"
-#import "STVReposMapperImplementation.h"
-
 #endif /* Githuramba_Bridging_Header_h */

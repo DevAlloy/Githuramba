@@ -10,7 +10,7 @@ import Foundation
 
 public class STVRamblerRepoServiceImplementation : NSObject, RepoService {
     
-    public lazy var reposMapper: STVReposMapper! = self.initialReposMapper()
+    public lazy var reposMapper: ReposMapper! = self.initialReposMapper()
     
     public lazy var urlSession: NSURLSession! = self.initialUrlSession()
     
@@ -20,8 +20,8 @@ public class STVRamblerRepoServiceImplementation : NSObject, RepoService {
         return urlSession
     }
     
-    func initialReposMapper() -> STVReposMapper {
-        let reposMapper = STVReposMapperImplementation()
+    func initialReposMapper() -> ReposMapper {
+        let reposMapper = ReposMapperImplementation()
         return reposMapper
     }
     
@@ -30,7 +30,7 @@ public class STVRamblerRepoServiceImplementation : NSObject, RepoService {
         let request: NSURLRequest = NSURLRequest(URL: url)
         let dataTask: NSURLSessionDataTask = self.urlSession.dataTaskWithRequest(request, completionHandler: {[weak self] (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             if let data = data as NSData! {
-                let repos: [STVRepo]? = self?.reposArrayFromReposData(data)
+                let repos: [Repo]? = self?.reposArrayFromReposData(data)
                 if let completionBlock = completionBlock as STVDataServiceReposCompletionBlock! {
                     dispatch_async(dispatch_get_main_queue(), {() -> Void in
                         completionBlock(repos, error)
@@ -47,7 +47,7 @@ public class STVRamblerRepoServiceImplementation : NSObject, RepoService {
         let request: NSURLRequest = NSURLRequest(URL: url)
         let dataTask: NSURLSessionDataTask = self.urlSession.dataTaskWithRequest(request, completionHandler: {[weak self] (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             if let data = data as NSData! {
-                let repo: STVRepo? = self?.repoFromRepoData(data)
+                let repo: Repo? = self?.repoFromRepoData(data)
                 if let completionBlock = completionBlock as STVDataServiceRepoDetailCompletionBlock! {
                     dispatch_async(dispatch_get_main_queue(), {() -> Void in
                         completionBlock(repo, error)
@@ -58,20 +58,20 @@ public class STVRamblerRepoServiceImplementation : NSObject, RepoService {
         dataTask.resume()
     }
     
-    func reposArrayFromReposData(reposData: NSData) -> [STVRepo]? {
+    func reposArrayFromReposData(reposData: NSData) -> [Repo]? {
         let reposRepresentationArray = try? NSJSONSerialization.JSONObjectWithData(reposData, options: NSJSONReadingOptions.AllowFragments)
         if let reposRepresentationArray = reposRepresentationArray as! [AnyObject]! {
-            let repos: [STVRepo] = self.reposMapper.mapReposArrayFromReposRepresentation(reposRepresentationArray)
+            let repos: [Repo]? = self.reposMapper.mapReposArrayFromReposRepresentation(reposRepresentationArray)
             return repos
         } else {
             return nil;
         }
     }
     
-    func repoFromRepoData(repoData: NSData) -> STVRepo? {
+    func repoFromRepoData(repoData: NSData) -> Repo? {
         let repoRepresentationDictionary = try? NSJSONSerialization.JSONObjectWithData(repoData, options: NSJSONReadingOptions.AllowFragments)
         if let repoRepresentationDictionary = repoRepresentationDictionary as! [NSObject: AnyObject]! {
-            let repo: STVRepo = self.reposMapper.mapRepoDetailsFromRepoRepresentation(repoRepresentationDictionary)
+            let repo: Repo? = self.reposMapper.mapRepoDetailsFromRepoRepresentation(repoRepresentationDictionary)
             return repo
         } else {
             return nil;

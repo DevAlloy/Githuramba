@@ -8,8 +8,8 @@
 
 import Foundation
 
-public typealias STVDataServiceReposCompletionBlock = ([STVRepo]?, NSError!) -> Void
-public typealias STVDataServiceRepoDetailCompletionBlock = (STVRepo?, NSError?) -> Void
+public typealias STVDataServiceReposCompletionBlock = ([Repo]?, NSError!) -> Void
+public typealias STVDataServiceRepoDetailCompletionBlock = (Repo?, NSError?) -> Void
 
 public protocol RepoService : NSObjectProtocol {
     

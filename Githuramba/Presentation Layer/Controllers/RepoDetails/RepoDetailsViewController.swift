@@ -11,7 +11,7 @@ class RepoDetailsViewController: UIViewController {
     lazy var dateFormatter: NSDateFormatter = self.initialDateFormatter()
     
     var repoName: String?
-    var repo: STVRepo?
+    var repo: Repo?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var starLabel: UILabel!
@@ -37,7 +37,7 @@ class RepoDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let repoName = repoName as String! {
-            self.dataService.obtainRepoDetailForRepoName(repoName) {[weak self] (repo: STVRepo?, error: NSError?) -> Void in
+            self.dataService.obtainRepoDetailForRepoName(repoName) {[weak self] (repo: Repo?, error: NSError?) -> Void in
                 if let repo = repo {
                     self?.repo = repo
                     self?.setupRepo()
@@ -54,9 +54,9 @@ class RepoDetailsViewController: UIViewController {
 
     func setupRepo() {
         self.titleLabel.text = self.repo!.name
-        self.starLabel.text = self.repo!.stars.stringValue
-        self.forkLabel.text = self.repo!.forks.stringValue
+        self.starLabel.text = self.repo!.stars!.stringValue
+        self.forkLabel.text = self.repo!.forks!.stringValue
         self.descriptionLabel.text = self.repo!.repoDescription
-        self.createdAtLabel.text = self.dateFormatter.stringFromDate(self.repo!.createdAt)
+        self.createdAtLabel.text = self.dateFormatter.stringFromDate(self.repo!.createdAt!)
     }
 }

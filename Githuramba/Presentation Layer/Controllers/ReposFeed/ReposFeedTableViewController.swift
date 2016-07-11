@@ -12,8 +12,8 @@ class ReposFeedTableViewController: UITableViewController {
     
     lazy var dataService: RepoService = self.initialDataService()
     
-    var repos: [STVRepo]?
-    var selectedRepo: STVRepo?
+    var repos: [Repo]?
+    var selectedRepo: Repo?
     
     // MARK: - Зависимости
     
@@ -30,8 +30,8 @@ class ReposFeedTableViewController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 160.0
         
-        self.dataService.obtainReposWithCompletionBlock {[weak self] (repos: [STVRepo]?, error: NSError?) in
-            if let repos = repos as [STVRepo]! {
+        self.dataService.obtainReposWithCompletionBlock {[weak self] (repos: [Repo]?, error: NSError?) in
+            if let repos = repos as [Repo]! {
                 self?.repos = repos;
                 self?.tableView.reloadData()
             }
@@ -82,10 +82,10 @@ class ReposFeedTableViewController: UITableViewController {
         self.performSegueWithIdentifier("openDetails", sender: self)
     }
     
-    func configureCell(tableViewCell: FeedCell, withRepo repo: STVRepo) {
+    func configureCell(tableViewCell: FeedCell, withRepo repo: Repo) {
         tableViewCell.repoNameLabel.text = repo.name
-        tableViewCell.starLabel.text = repo.stars.stringValue
-        tableViewCell.forkLabel.text = repo.forks.stringValue
+        tableViewCell.starLabel.text = repo.stars!.stringValue
+        tableViewCell.forkLabel.text = repo.forks!.stringValue
         tableViewCell.descriptionLabel.text = repo.repoDescription
     }
     
